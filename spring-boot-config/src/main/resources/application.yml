@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+team:
+  name: "Web2班"
+  leader:  "mqxu"
+  phone:  "13815513156"
+  age:  ${random.int(1,4)}
+
+spring:
+  servlet:
+    multipart:
+        max-file-size: 10MB
+        max-request-size: 100MB
+
+
+custom:
+  qrcode:
+    content: "https://www.baidu.com"
