@@ -1,7 +1,7 @@
-package top.sy.model;
+package top.sy.service;
 
 import org.springframework.web.multipart.MultipartFile;
 
 public interface OssService {
-        String upload(MultipartFile file);
+    String upload(MultipartFile file);
 }

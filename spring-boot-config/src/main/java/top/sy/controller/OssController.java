@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import top.sy.model.OssService;
+import top.sy.service.OssService;
 
 @RestController
 @RequestMapping("/oss")

@@ -1,4 +1,4 @@
-package top.sy.model.impl;
+package top.sy.service.impl;
 //
 //
 //import com.aliyun.oss.OSS;
@@ -30,7 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import top.sy.config.OssConfig;
-import top.sy.model.OssService;
+import top.sy.service.OssService;
 
 import java.io.InputStream;
 import java.util.UUID;
