@@ -1,4 +1,4 @@
-package top.sy.controller;
+package top.sy.common;
 
 import lombok.Getter;
 
