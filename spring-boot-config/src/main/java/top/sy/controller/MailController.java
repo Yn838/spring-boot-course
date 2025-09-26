@@ -7,10 +7,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import top.sy.common.ApiResponse;
 import top.sy.enums.ResultStatus;
 import top.sy.model.Mail;
 import top.sy.service.MailService;
+
 
 @RestController
 @RequestMapping("/mail")

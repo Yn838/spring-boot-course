@@ -18,26 +18,29 @@ import java.util.Objects;
 
 @Service
 public class MailServiceImpl implements MailService {
+    //读取配置的发件人
     @Value("${spring.mail.username}")
     private String from;
 
     @Resource
     private JavaMailSender javaMailSender;
 
-@Override
-public ResultStatus sendSimpleMail(Mail mail){
-       SimpleMailMessage message = new SimpleMailMessage();
-       message.setFrom(from);
-       message.setTo(mail.getTo());
-       message.setSubject(mail.getSubject());
-       message.setText(mail.getContent());
-       try {
-           javaMailSender.send(message);
-           return ResultStatus.SUCCESS;
-       } catch (Exception e) {
-           return ResultStatus.FAIL;
-       }
-   }
+    @Override
+    public ResultStatus sendSimpleMail(Mail mail) {
+        //简单的邮件信息
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom(from);
+        message.setTo(mail.getTo());
+        message.setSubject(mail.getSubject());
+        message.setText(mail.getContent());
+        try {
+            javaMailSender.send(message);
+            return ResultStatus.SUCCESS;
+        } catch (Exception e) {
+            return ResultStatus.FAIL;
+        }
+    }
+
     @Override
     public ResultStatus sendHtmlMail(Mail mail) {
         try {
@@ -54,6 +57,7 @@ public ResultStatus sendSimpleMail(Mail mail){
             return ResultStatus.FAIL;
         }
     }
+
     @Override
     public ResultStatus sendAttachmentsMail(Mail mail, MultipartFile[] files) {
         try {
@@ -66,7 +70,7 @@ public ResultStatus sendSimpleMail(Mail mail){
             helper.setText(mail.getContent(), true);
             if (files != null) {
                 for (MultipartFile file : files) {
-                    if (file != null && !file.isEmpty()) {
+                    if (file != null && !file.isEmpty()){
                         helper.addAttachment(Objects.requireNonNull(file.getOriginalFilename()), new ByteArrayResource(file.getBytes()));
                     }
                 }

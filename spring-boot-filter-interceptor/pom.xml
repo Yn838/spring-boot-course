@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-week1</artifactId>
+    <artifactId>spring-boot-filter-interceptor</artifactId>
 
     <properties>
         <maven.compiler.source>22</maven.compiler.source>
@@ -19,20 +19,26 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <!-- 容联云短信 SDK -->
-        <dependency>
-            <groupId>com.cloopen</groupId>
-            <artifactId>java-sms-sdk</artifactId>
-            <version>1.0.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
+
+<!--        &lt;!&ndash;JWT &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.jasonwebtoken</groupId>-->
+<!--            <artifactId>jjwt-api</artifactId>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>io.jasonwebtoken</groupId>-->
+<!--            <artifactId>jjwt-impl</artifactId>-->
+<!--        </dependency>-->
+
+
+<!--        <dependency>-->
+<!--            <groupId>io.jasonwebtoken</groupId>-->
+<!--            <artifactId>jjwt-jackson</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
+
 
 </project>
